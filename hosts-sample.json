@@ -1,0 +1,10 @@
+[
+  {
+    "name": "SAMPLE_NAME",
+    "online": false,
+    "mac": "SAMPLE_MAC",
+    "ip": "SAMPLE_IP",
+    "username": "SAMPLE_USERNAME",
+    "password": "SAMPLE_PASSWORD"
+  }
+]
