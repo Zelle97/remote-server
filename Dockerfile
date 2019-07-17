@@ -2,7 +2,7 @@ FROM node:8
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
-COPY . .
+COPY src ./src
 
 EXPOSE 8888
 CMD [ "npm", "start" ]
