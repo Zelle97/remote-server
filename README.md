@@ -5,10 +5,11 @@ Its a simple express server that uses some tools to influence and check on hosts
 
 ## Util
 
-This application uses has 3 different utilities. It can 
+This application has 3 different utilities. It can 
  - check if a host is online
  - start a host with a WoL package
  - shutdown a host via remote execution
+ - provide a list of all configured hosts
  
 ## Disclaimer
 
@@ -23,6 +24,8 @@ Make sure the motherboard of the host you want to start with a WoL package suppo
 To shutdown a host with remote execution the user needs to have sudo permissions and the password prompt for sudo commands has to be disabled.
 
 ## Usage
+
+TODO
 
 ### Stand-Alone
 

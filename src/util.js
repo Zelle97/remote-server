@@ -5,6 +5,11 @@ let Client = require('ssh2').Client;
 const hosts = require('../config/hosts.json');
 
 module.exports = {
+    getHosts: function (response) {
+        let filteredHosts = filterHosts();
+        response.json(filteredHosts);
+    },
+
     getStatus: function (name, response) {
         let host = getHost(name);
         if (host !== undefined) {
@@ -27,6 +32,15 @@ module.exports = {
         console.log('Host ' + name + ' not found!');
     }
 };
+
+function filterHosts() {
+    let filtered = [];
+    hosts.forEach(host => {
+        filtered.push({"name": host.name, "online": host.online})
+    });
+    return filtered;
+
+}
 
 function getHost(name) {
     return hosts.find(host => name === host.name);
