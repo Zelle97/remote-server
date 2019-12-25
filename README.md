@@ -23,10 +23,6 @@ If you use it only in your private network everything is fine but remember it if
 Make sure the motherboard of the host you want to start with a WoL package supports it and the setting is enabled in the BIOS.
 To shutdown a host with remote execution the user needs to have sudo permissions and the password prompt for sudo commands has to be disabled.
 
-## Usage
-
-TODO
-
 ### Stand-Alone
 
 If you want to use the remote-server backend without the home-remote-compose file you can do this in two ways.
@@ -36,6 +32,16 @@ If you want to use the remote-server backend without the home-remote-compose fil
  
 Either way you need to configure the hosts.json file. in the config folder there is a sample which you can extend for your usage.
 Remember that if you use Docker you should mount the config directory as a volume.
+
+### Docker and Architectures
+
+This application was mainly developed to be used to start and shutdown other computers from a smaller device ( like a raspberry ).
+The Docker images for this app are automaticly build from DockerHub.
+But if you want to use this app on a raspberry you have to build the image yourself 
+because DockerHub doesen't support the automated building of multiple architectures ( at this moment ).
+
+To do so clone this repo and execute 'docker build . -t zellesdocker/remote-dashboard'.
+This will build the image with the architecture of the system you are executing the command on.
 
 ##### Author & Licence
 
