@@ -28,8 +28,9 @@ To shutdown a host with remote execution the user needs to have sudo permissions
 If you want to use the remote-server backend without the home-remote-compose file you can do this in two ways.
 
  1) Run the Docker Container without the compose from home-remote-app
- 2) Clone this repo and execute 'npm i' and 'npm start'
- 
+ 2) Clone this repo and execute ``` npm i ``` and ``` npm start ```
+
+### Configuration
 Either way you need to configure the hosts.json file. in the config folder there is a sample which you can extend for your usage.
 Remember that if you use Docker you should mount the config directory as a volume.
 
@@ -40,7 +41,7 @@ The Docker images for this app are automaticly build from DockerHub.
 But if you want to use this app on a raspberry you have to build the image yourself 
 because DockerHub doesen't support the automated building of multiple architectures ( at this moment ).
 
-To do so clone this repo and execute 'docker build . -t zellesdocker/remote-dashboard'.
+To do so clone this repo and execute ``` docker build . -t zellesdocker/remote-dashboard ```.
 This will build the image with the architecture of the system you are executing the command on.
 
 ##### Author & Licence
