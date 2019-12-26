@@ -22,14 +22,20 @@ module.exports = {
 
     wakeUp: function (name) {
         let host = getHost(name);
-        if (host !== undefined) sendWoLPackage(host);
-        console.log('Host ' + name + ' not found!');
+        if (host !== undefined) {
+            sendWoLPackage(host);
+        } else {
+            console.log('Host ' + name + ' not found!');
+        }
     },
 
     shutDown: function (name) {
         let host = getHost(name);
-        if (host !== undefined) executeShutdown(host);
-        console.log('Host ' + name + ' not found!');
+        if (host !== undefined) {
+            executeShutdown(host);
+        } else {
+            console.log('Host ' + name + ' not found!');
+        }
     }
 };
 
