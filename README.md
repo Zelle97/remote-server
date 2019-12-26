@@ -41,7 +41,7 @@ The Docker images for this app are automaticly build from DockerHub.
 But if you want to use this app on a raspberry you have to build the image yourself 
 because DockerHub doesen't support the automated building of multiple architectures ( at this moment ).
 
-To do so clone this repo and execute ``` docker build . -t zellesdocker/remote-dashboard ```.
+To do so clone this repo and execute ``` docker build . -t zellesdocker/remote-server ```.
 This will build the image with the architecture of the system you are executing the command on.
 
 ##### Author & Licence
